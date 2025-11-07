@@ -1,0 +1,26 @@
+/* 🔙 Back Button - Top Left Corner */
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: transparent;
+  border: none;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.back-button:hover {
+  color: #007bff; /* blue hover effect */
+}
+
+/* Optional: Icon styling (if using ← or SVG) */
+.back-button::before {
+  content: "←";
+  font-size: 1.2rem;
+}

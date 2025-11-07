@@ -1,0 +1,39 @@
+.hostel-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.hostel-card:hover {
+  transform: translateY(-3px);
+}
+
+.hostel-image img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.hostel-info {
+  padding: 1rem;
+}
+
+.hostel-info h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.2rem;
+}
+
+.hostel-info .location {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.hostel-info .desc {
+  font-size: 0.9rem;
+  color: #374151;
+  margin-top: 0.5rem;
+}
