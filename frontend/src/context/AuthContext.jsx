@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
   const [accessToken, setAccessToken] = useState(() => localStorage.getItem("accessToken"));
 
   const login = async (email, password) => {
-    const res = await axios.post("http://localhost:5000/api/auth/login", { email, password });
+    const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/login`, { email, password });
     const loggedUser = res.data.user;
 
     if (!loggedUser) throw new Error("Invalid credentials");
