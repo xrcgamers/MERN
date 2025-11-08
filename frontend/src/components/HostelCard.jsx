@@ -10,7 +10,7 @@ const HostelCard = ({ hostel, onSelect }) => {
         <img
           src={
     hostel.image
-      ? `${process.env.REACT_UPLOAD_URL}/${hostel.image}`
+      ? `${process.env.REACT_APP_UPLOAD_URL}/${hostel.image}`
       : "/default-hostel.jpg"
           }
           alt={hostel.name}

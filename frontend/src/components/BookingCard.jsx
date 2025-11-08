@@ -12,7 +12,7 @@ const BookingCard = ({ booking }) => {
     <div className="booking-card">
       {booking.hostel?.image && (
         <img
-          src={`${process.env.REACT_UPLOAD_URL}/${booking.hostel.image}`}
+          src={`${process.env.REACT_APP_UPLOAD_URL}/${booking.hostel.image}`}
           alt={hostelName}
           className="booking-hostel-image"
         />
