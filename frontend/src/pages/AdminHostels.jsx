@@ -167,7 +167,7 @@ const AdminHostels = () => {
                 <div className="card-body">
                   {hostel.image && (
                     <img
-                      src={`http://localhost:5000/uploads/${hostel.image}`}
+                      src={`${process.env.REACT_APP_UPLOAD_URL}/${hostel.image}`}
                       alt={hostel.name}
                       className="hostel-image"
                     />
