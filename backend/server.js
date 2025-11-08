@@ -21,8 +21,10 @@ const app = express();
 // ---------------------
 // Middleware
 // ---------------------
+const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:3000";
+
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: FRONTEND_URL,
   credentials: true,
 }));
 
