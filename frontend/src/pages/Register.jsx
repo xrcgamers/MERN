@@ -22,14 +22,7 @@ const Register = () => {
 
   return (
     <div className="auth-container">
-      {/* Optional: Keep admin icon for consistency */}
-      <div
-        className="admin-icon"
-        onClick={() => navigate("/admin/hostels")}
-        title="Admin Panel"
-      >
-        <i className="fas fa-user-shield"></i>
-      </div>
+      
 
       <div className="auth-card">
         <div className="auth-header">

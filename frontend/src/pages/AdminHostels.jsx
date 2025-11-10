@@ -107,6 +107,8 @@ const AdminHostels = () => {
           <div className="modal-overlay" onClick={resetForm}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
               <h2>{editingId ? "Edit Hostel" : "Add New Hostel"}</h2>
+
+
               <form onSubmit={handleSubmit} className="hostel-form">
                 <input
                   placeholder="Hostel Name"
@@ -147,19 +149,24 @@ const AdminHostels = () => {
                   </button>
                 </div>
               </form>
+
+              
             </div>
           </div>
         )}
 
         {/* Hostels Grid */}
         <div className="hostels-grid">
-          {loading ? (
-            [...Array(4)].map((_, i) => <div key={i} className="skeleton-card" />)
-          ) : !Array.isArray(hostels) || hostels.length === 0 ? (
+          {loading && [...Array(4)].map((_, i) => <div key={i} className="skeleton-card" />)}
+
+          {!loading && (!Array.isArray(hostels) || hostels.length === 0) && (
             <p className="empty">No hostels yet. Add one!</p>
-          ) : (
+           )}
+
+          {!loading && Array.isArray(hostels) && hostels.length > 0 && (
             hostels.map((hostel) => (
-              <div key={hostel._id} className="hostel-card">
+                <div key={hostel._id} className="hostel-card">
+                  
                 <div className="card-header">
                   <h3>{hostel.name || "Unknown Hostel"}</h3>
                   <span className="location">Location: {hostel.location || "Unknown"}</span>

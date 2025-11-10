@@ -75,15 +75,17 @@ const Login = () => {
     <div className="auth-container">
       {/* Admin Icon – Top Right */}
       <div
-        className="admin-icon"
-        onClick={handleAdminClick}
-        title="Admin Panel"
-        role="button"
-        tabIndex={0}
-        onKeyPress={(e) => e.key === 'Enter' && handleAdminClick()}
-      >
-        <i className="fas fa-user-shield"></i>
-      </div>
+  className="admin-icon"
+  onClick={handleAdminClick}
+  title="Admin Panel"
+  role="button"
+  tabIndex={0}
+  onKeyPress={(e) => e.key === "Enter" && handleAdminClick()}
+>
+  <i className="fas fa-user-shield"></i>
+  <span className="admin-label">Admin</span>
+</div>
+
 
       <div className="auth-card">
         <div className="auth-header">

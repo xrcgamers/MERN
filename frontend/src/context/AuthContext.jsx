@@ -10,6 +10,7 @@ export const AuthProvider = ({ children }) => {
     const savedUser = localStorage.getItem("user");
     return savedUser ? JSON.parse(savedUser) : null;
   });
+  
   const [accessToken, setAccessToken] = useState(() => localStorage.getItem("accessToken"));
 
   const login = async (email, password) => {

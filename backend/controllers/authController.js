@@ -10,6 +10,8 @@ const generateAccessToken = (id) =>
 const generateRefreshToken = (id) =>
   jwt.sign({ id }, process.env.JWT_REFRESH_SECRET, { expiresIn: "7d" });
 
+
+
 exports.registerUser = async (req, res) => {
   const { name, email, password, role } = req.body;
   if (!name || !email || !password) {

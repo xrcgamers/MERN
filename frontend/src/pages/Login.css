@@ -195,3 +195,9 @@ input::placeholder {
     right: 1rem;
   }
 }
+.admin-label {
+  font-weight: 500;
+  font-size: 12px;
+  margin-top: 4px;
+  color: rgb(221, 229, 233);
+}
